@@ -1,0 +1,1 @@
+GET http://127.0.0.1:8888/v1/order/list?uid=123

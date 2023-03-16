@@ -12,7 +12,7 @@ message ProductRequest {
 }
 
 message ProductResponse {
-  repeated ProductItem products = 1;
+  map<int64, ProductItem> products = 1;
 }
 
 message ProductItem {
