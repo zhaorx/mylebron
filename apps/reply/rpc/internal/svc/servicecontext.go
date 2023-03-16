@@ -1,10 +1,9 @@
 package svc
 
-import "mylebron/apps/product/rpc/internal/config"
+import "mylebron/apps/reply/rpc/internal/config"
 
 type ServiceContext struct {
 	Config config.Config
-	// ProductModel model.ProductModel
 }
 
 func NewServiceContext(c config.Config) *ServiceContext {
