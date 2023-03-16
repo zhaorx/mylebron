@@ -4,6 +4,7 @@ import (
 	"flag"
 	"fmt"
 
+	"github.com/zeromicro/go-zero/core/logx"
 	"mylebron/apps/app/api/internal/config"
 	"mylebron/apps/app/api/internal/handler"
 	"mylebron/apps/app/api/internal/svc"
@@ -27,5 +28,6 @@ func main() {
 	handler.RegisterHandlers(server, ctx)
 
 	fmt.Printf("Starting server at %s:%d...\n", c.Host, c.Port)
+	logx.DisableStat()
 	server.Start()
 }
