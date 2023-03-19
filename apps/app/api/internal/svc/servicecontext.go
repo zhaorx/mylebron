@@ -5,14 +5,13 @@ import (
 	"mylebron/apps/app/api/internal/config"
 	"mylebron/apps/order/rpc/order"
 	"mylebron/apps/product/rpc/product"
-	"mylebron/apps/reply/rpc/reply"
 )
 
 type ServiceContext struct {
 	Config     config.Config
 	OrderRPC   order.Order
 	ProductRPC product.Product
-	ReplyRPC   reply.Reply
+	// ReplyRPC   reply.Reply
 }
 
 func NewServiceContext(c config.Config) *ServiceContext {
@@ -20,6 +19,6 @@ func NewServiceContext(c config.Config) *ServiceContext {
 		Config:     c,
 		OrderRPC:   order.NewOrder(zrpc.MustNewClient(c.OrderRPC)),
 		ProductRPC: product.NewProduct(zrpc.MustNewClient(c.ProductRPC)),
-		ReplyRPC:   reply.NewReply(zrpc.MustNewClient(c.ReplyRPC)),
+		// ReplyRPC:   reply.NewReply(zrpc.MustNewClient(c.ReplyRPC)),
 	}
 }

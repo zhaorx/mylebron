@@ -1,6 +1,13 @@
 Name: order.rpc
 ListenOn: 127.0.0.1:8080
+Mode: dev
+Timeout: 60000
 Etcd:
   Hosts:
   - 127.0.0.1:2379
   Key: order.rpc
+DataSource: root:root@tcp(127.0.0.1:3306)/orders?parseTime=true
+CacheRedis:
+  - Host: 127.0.0.1:6379
+    Pass:
+    Type: node

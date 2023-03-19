@@ -4,6 +4,7 @@ import (
 	"flag"
 	"fmt"
 
+	"github.com/zeromicro/go-zero/core/logx"
 	"mylebron/apps/order/rpc/internal/config"
 	"mylebron/apps/order/rpc/internal/server"
 	"mylebron/apps/order/rpc/internal/svc"
@@ -36,5 +37,6 @@ func main() {
 	defer s.Stop()
 
 	fmt.Printf("Starting rpc server at %s...\n", c.ListenOn)
+	logx.DisableStat()
 	s.Start()
 }

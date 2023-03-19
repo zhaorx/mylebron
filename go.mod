@@ -3,6 +3,7 @@ module mylebron
 go 1.19
 
 require (
+	github.com/spf13/cast v1.5.0
 	github.com/zeromicro/go-zero v1.3.4
 	google.golang.org/grpc v1.46.2
 	google.golang.org/protobuf v1.28.0
@@ -19,6 +20,7 @@ require (
 	github.com/go-logr/logr v1.2.3 // indirect
 	github.com/go-logr/stdr v1.2.2 // indirect
 	github.com/go-redis/redis/v8 v8.11.5 // indirect
+	github.com/go-sql-driver/mysql v1.6.0 // indirect
 	github.com/gogo/protobuf v1.3.2 // indirect
 	github.com/golang-jwt/jwt/v4 v4.4.1 // indirect
 	github.com/golang/mock v1.6.0 // indirect

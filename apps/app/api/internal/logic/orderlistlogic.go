@@ -28,7 +28,12 @@ func NewOrderListLogic(ctx context.Context, svcCtx *svc.ServiceContext) *OrderLi
 }
 
 func (l *OrderListLogic) OrderList(req *types.OrderListRequest) (resp *types.OrderListResponse, err error) {
-	orderRet, err := l.svcCtx.OrderRPC.Orders(l.ctx, &order.OrdersRequest{UserId: req.UID})
+	orderRet, err := l.svcCtx.OrderRPC.Orders(l.ctx, &order.OrdersRequest{
+		UserId: req.UID,
+		Status: 0,
+		Cursor: 1,
+		Ps:     10,
+	})
 	if err != nil {
 		return nil, err
 	}
